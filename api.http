@@ -1,0 +1,39 @@
+GET http://localhost:3000
+
+###
+
+GET http://localhost:3000/books
+
+###
+GET http://localhost:3000/books/609a850cf9e4747ef299c853
+###
+
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "title": "Super livre",
+  "description": "Description du livre",
+  "image": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/contemporary-fiction-night-time-book-cover-design-template-1be47835c3058eb42211574e0c4ed8bf_screen.jpg?ts=1594616847",
+  "author": "Angelina Aludo",
+  "stars": 5,
+  "price": 10.2
+}
+
+###
+
+PATCH http://localhost:3000/books/609a850cf9e4747ef299c853
+Content-Type: application/json
+
+{
+  // Mettre ici les champs du livre à mettre à jour
+  "title": "Les Chroniques de Spiderwick",
+  "description": "Livre Fantastique",
+  "image": "https://ec56229aec51f1baff1d-185c3068e22352c56024573e929788ff.ssl.cf1.rackcdn.com/attachments/large/0/4/2/000364042.jpg",
+  "author": "Hollly Black & Tony DiTerlizzi",
+  "stars": 7,
+  "price": 9.8
+}
+
+###
+DELETE http://localhost:3000/books/609a850cf9e4747ef299c853
